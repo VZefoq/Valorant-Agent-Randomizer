@@ -1248,7 +1248,7 @@ const ROLE_COLORS = {
 };
 
 const PORTRAIT_TUNING = {
-    VETO: { scale: 1.24, offsetX: 0 },
+    VETO: { scale: 1.13, offsetX: 10 },
     VYSE: { scale: 1.22, offsetX: 0 },
     WAYLAY: { scale: 1.2, offsetX: 0 },
     TEJO: { scale: 1.2, offsetX: 0 },
