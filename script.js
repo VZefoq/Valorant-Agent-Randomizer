@@ -1247,6 +1247,13 @@ const ROLE_COLORS = {
     SENTINEL: '#E6AC4A',
 };
 
+const PORTRAIT_TUNING = {
+    VETO: { scale: 1.24, offsetX: 0 },
+    VYSE: { scale: 1.22, offsetX: 0 },
+    WAYLAY: { scale: 1.2, offsetX: 0 },
+    TEJO: { scale: 1.2, offsetX: 0 },
+};
+
 const AGENT_VOICELINES = {
     ASTRA: 'assets/voice/AstraPick.mp3',
     BREACH: 'assets/voice/BreachPick.mp3',
@@ -1416,6 +1423,11 @@ function revealAgent(agent) {
     roleTag.style.color = rc;
     roleTag.style.borderColor = rc;
     spinOverlay.classList.add('hidden');
+
+    // Reset/apply per-agent portrait tuning for better framing.
+    const tuning = PORTRAIT_TUNING[agent.name] || { scale: 1, offsetX: 0 };
+    agentImg.style.transform = `translateX(calc(-50% + ${tuning.offsetX}px)) scale(${tuning.scale})`;
+    agentImg.style.objectPosition = 'bottom center';
 
     agentImg.onload = () => agentImg.classList.add('visible');
     agentImg.src = agent.img;
