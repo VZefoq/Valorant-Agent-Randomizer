@@ -104,6 +104,7 @@ Made by zef
 ## Community and Contact
 
 Discord Server: discord.gg/zef
+
 TikTok: zefoq
 
 For support, feedback, or collaborations, contact me on Discord: vzefoq
