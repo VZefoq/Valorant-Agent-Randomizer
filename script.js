@@ -1490,9 +1490,7 @@ function revealAgent(agent) {
     playAgentVoiceLine(agent.name);
 }
 
-/* ============================================================
-   MUSIC PLAYER
-   ============================================================ */
+/* MUSIC PLAYER */
 (function() {
   const TRACKS = [
     {
